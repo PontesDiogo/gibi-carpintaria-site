@@ -1,73 +1,80 @@
-# React + TypeScript + Vite
+# Gibi Carpintaria - Site Institucional
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto consiste no desenvolvimento do site institucional da **Gibi Carpintaria**, com o objetivo de fortalecer a presença digital da empresa, apresentar seus serviços, divulgar projetos realizados e facilitar o contato de clientes para solicitação de orçamentos.
 
-Currently, two official plugins are available:
+O sistema faz parte de um projeto piloto para avaliar, durante um período inicial de aproximadamente 6 meses, o impacto da presença online na geração de acessos, contatos comerciais e possíveis vendas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Objetivo do projeto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Criar uma landing page moderna, responsiva e profissional para a Gibi Carpintaria, permitindo que visitantes conheçam melhor a empresa, visualizem serviços realizados e entrem em contato diretamente com a área de vendas.
 
-## Expanding the ESLint configuration
+Além da página pública, o projeto contará com uma área administrativa para cadastro e gerenciamento de publicações de serviços realizados.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Funcionalidades previstas
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Área pública
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Página inicial institucional;
+- Apresentação da identidade visual da empresa;
+- Seção de serviços e produtos oferecidos;
+- Seção de projetos/serviços realizados;
+- Visualização de publicações com fotos, título, descrição e serviços prestados;
+- Botão de contato por e-mail;
+- Botão de contato por WhatsApp;
+- Informações de localização e atendimento;
+- Layout responsivo para desktop, tablet e celular.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Área administrativa
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Login de administrador;
+- Cadastro de publicações de serviços realizados;
+- Edição de publicações;
+- Exclusão ou arquivamento de publicações;
+- Upload de imagens dos serviços;
+- Definição de serviços prestados em cada publicação;
+- Controle de publicações ativas/inativas.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Monitoramento
+
+- Integração com Google Analytics;
+- Acompanhamento de acessos;
+- Monitoramento de cliques em botões de contato;
+- Apoio na análise de geração de leads e orçamentos.
+
+---
+
+## Tecnologias utilizadas
+
+- React
+- TypeScript
+- Vite
+- Supabase
+- Supabase Auth
+- Supabase Database
+- Supabase Storage
+- Netlify
+- GoDaddy DNS
+- Google Analytics
+
+---
+
+## Estrutura inicial do projeto
+
+```txt
+src/
+├── assets/
+├── components/
+│   ├── layout/
+│   ├── home/
+│   ├── projects/
+│   └── admin/
+├── pages/
+├── services/
+├── styles/
+├── types/
+├── App.tsx
+└── main.tsx
