@@ -1,5 +1,6 @@
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
+import logoGibiIcon from '../../assets/logos/logo-gibi-icon.png'
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -21,7 +22,9 @@ export function Navbar() {
           onClick={() => scrollToSection('inicio')}
           aria-label="Ir para o início"
         >
-          <span className="navbar__logo">G</span>
+          <span className="navbar__logo">
+            <img src={logoGibiIcon} alt="Logo Gibi Carpintaria" />
+          </span>
 
           <div>
             <strong>Gibi Carpintaria</strong>

@@ -1,3 +1,5 @@
+import logoGibiIcon from '../../assets/logos/logo-gibi-icon.png'
+
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
@@ -5,7 +7,9 @@ export function Footer() {
     <footer className="footer">
       <div className="container footer__content">
         <div className="footer__brand">
-          <span className="footer__logo">G</span>
+          <span className="footer__logo">
+            <img src={logoGibiIcon} alt="Logo Gibi Carpintaria" />
+          </span>
 
           <div>
             <strong>Gibi Carpintaria</strong>

@@ -1,5 +1,6 @@
+import type { CSSProperties } from 'react'
 import { ArrowRight, Hammer, Mail } from 'lucide-react'
-import heroImage from '../../assets/hero.png'
+import heroImage from '../../assets/images/hero-gibi-carpintaria.png'
 
 export function HeroSection() {
   return (
@@ -52,7 +53,7 @@ export function HeroSection() {
         <div className="hero__visual">
           <div
             className="hero__image"
-            style={{ '--hero-image': `url(${heroImage})` } as React.CSSProperties}
+            style={{ '--hero-image': `url(${heroImage})` } as CSSProperties}
           >
             <div className="hero__floating-card">
               <Hammer size={24} />

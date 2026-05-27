@@ -1,30 +1,22 @@
 :root {
-  /* Paleta Areia de Bordo / Madeira */
-  --color-sand-50: #fffaf2;
-  --color-sand-100: #f7ead8;
-  --color-sand-200: #edd8bb;
+  /* Paleta madeira avermelhada / areia */
+  --color-wood-950: #3a0000;
+  --color-wood-800: #692210;
+  --color-wood-600: #9c4516;
+  --color-wood-400: #ce7a48;
+  --color-wood-200: #ffb17c;
 
-  --color-maple-100: #f1dcc2;
-  --color-maple-200: #e8c79f;
-  --color-maple-400: #c99055;
-  --color-maple-500: #b9783d;
-
-  --color-wood-600: #946235;
-  --color-wood-700: #7a4f2a;
-  --color-wood-800: #5b351c;
-  --color-wood-900: #3b2414;
-
-  --color-moss-600: #58745d;
-  --color-moss-700: #3f5f46;
-  --color-moss-900: #22392a;
+  --color-sand-50: #fff8f0;
+  --color-sand-100: #f8eadc;
+  --color-sand-200: #ecd3bd;
 
   --color-white: #ffffff;
-  --color-text: #2d2118;
-  --color-muted: #75685c;
-  --color-border: #e7d6bf;
+  --color-text: #2b1711;
+  --color-muted: #76645b;
+  --color-border: #ead0bd;
 
-  --shadow-soft: 0 22px 70px rgba(59, 36, 20, 0.12);
-  --shadow-card: 0 14px 42px rgba(59, 36, 20, 0.1);
+  --shadow-soft: 0 22px 70px rgba(58, 0, 0, 0.13);
+  --shadow-card: 0 14px 42px rgba(58, 0, 0, 0.1);
 
   font-family:
     Inter,
@@ -57,8 +49,8 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    radial-gradient(circle at top left, rgba(201, 144, 85, 0.18), transparent 34rem),
-    radial-gradient(circle at top right, rgba(63, 95, 70, 0.12), transparent 32rem),
+    radial-gradient(circle at top left, rgba(206, 122, 72, 0.16), transparent 34rem),
+    radial-gradient(circle at top right, rgba(255, 177, 124, 0.18), transparent 32rem),
     linear-gradient(180deg, var(--color-sand-50) 0%, var(--color-sand-100) 100%);
 }
 
@@ -156,23 +148,23 @@ img {
 }
 
 .btn--primary {
-  background: linear-gradient(135deg, var(--color-wood-700), var(--color-wood-900));
+  background: linear-gradient(135deg, var(--color-wood-600), var(--color-wood-950));
   color: var(--color-white);
-  box-shadow: 0 14px 34px rgba(122, 79, 42, 0.24);
+  box-shadow: 0 14px 34px rgba(58, 0, 0, 0.24);
 }
 
 .btn--primary:hover {
-  box-shadow: 0 18px 38px rgba(122, 79, 42, 0.3);
+  box-shadow: 0 18px 38px rgba(58, 0, 0, 0.3);
 }
 
 .btn--secondary {
-  border: 1px solid rgba(122, 79, 42, 0.22);
+  border: 1px solid rgba(105, 34, 16, 0.22);
   background: rgba(255, 255, 255, 0.66);
   color: var(--color-wood-800);
 }
 
 .btn--secondary:hover {
-  border-color: rgba(122, 79, 42, 0.4);
+  border-color: rgba(105, 34, 16, 0.4);
   background: rgba(255, 255, 255, 0.9);
 }
 
@@ -188,4 +180,19 @@ img {
   .container {
     width: min(100% - 24px, 1120px);
   }
+}
+.section-badge {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid rgba(206, 122, 72, 0.28);
+  border-radius: 999px;
+  background: rgba(255, 177, 124, 0.16);
+  color: var(--color-wood-800);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
 }
