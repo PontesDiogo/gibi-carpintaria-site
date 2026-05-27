@@ -1,21 +1,25 @@
-import { useEffect } from 'react'
-import { supabase } from '../services/supabaseClient'
-function App() {
-  useEffect(() => {
-    async function loadProjects() {
-      const { data, error } = await supabase
-        .from('projects')
-        .select('*')
-        .eq('publicado', true)
+import { Footer } from '../layout/Footer'
+import { Navbar } from '../layout/Navbar'
+import { AboutSection } from '../home/AboutSection'
+import { ContactSection } from '../home/ContactSection'
+import { HeroSection } from '../home/HeroSection'
+import { ProjectsSection } from '../home/ProjectsSection'
+import { ServicesSection } from '../home/ServiceSection'
 
-      console.log('Projetos:', data)
-      console.log('Erro:', error)
-    }
+export function HomePage() {
+  return (
+    <>
+      <Navbar />
 
-    loadProjects()
-  }, [])
+      <main>
+        <HeroSection />
+        <ServicesSection />
+        <AboutSection />
+        <ProjectsSection />
+        <ContactSection />
+      </main>
 
-  return <h1>Gibi Carpintaria</h1>
+      <Footer />
+    </>
+  )
 }
-
-export default App
