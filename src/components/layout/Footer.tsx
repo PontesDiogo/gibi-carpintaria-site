@@ -10,8 +10,8 @@ export function Footer() {
           <div>
             <strong>Gibi Carpintaria</strong>
             <p>
-              Soluções em madeira, portas, pisos, forros e acabamentos para
-              obras em Itu e região.
+              Soluções em madeira, portas, pisos, forros, batentes, guarnições
+              e acabamentos para obras em Itu e região.
             </p>
           </div>
         </div>
@@ -25,11 +25,14 @@ export function Footer() {
         <div className="footer__contact">
           <span>vendas@gibicarpintaria.com</span>
           <span>Itu/SP e região</span>
+          <span>Atendimento para obras, reformas e acabamentos</span>
         </div>
       </div>
 
       <div className="footer__bottom">
-        <span>© {currentYear} Gibi Carpintaria. Todos os direitos reservados.</span>
+        <span>
+          © {currentYear} Gibi Carpintaria. Todos os direitos reservados.
+        </span>
       </div>
     </footer>
   )

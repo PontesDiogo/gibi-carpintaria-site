@@ -1,4 +1,5 @@
 import { ArrowRight, Hammer, Mail } from 'lucide-react'
+import heroImage from '../../assets/hero.png'
 
 export function HeroSection() {
   return (
@@ -7,12 +8,12 @@ export function HeroSection() {
         <div className="hero__text">
           <span className="section-badge">Gibi Carpintaria</span>
 
-          <h1>Soluções em madeira para transformar sua obra</h1>
+          <h1>Madeira, acabamento e soluções para transformar sua obra</h1>
 
           <p>
             Fornecimento de portas, pisos, forros, madeiras, batentes,
-            guarnições e acabamentos para clientes, empresas e obras em Itu e
-            região.
+            guarnições e soluções sob medida para clientes, profissionais e
+            empresas em Itu e região.
           </p>
 
           <div className="hero__actions">
@@ -25,7 +26,7 @@ export function HeroSection() {
             </a>
 
             <a className="btn btn--secondary" href="#projetos">
-              Ver projetos
+              Ver serviços realizados
               <ArrowRight size={18} />
             </a>
           </div>
@@ -37,8 +38,8 @@ export function HeroSection() {
             </div>
 
             <div>
-              <strong>Madeiras e acabamentos</strong>
-              <span>Soluções para obra</span>
+              <strong>Produtos em madeira</strong>
+              <span>Portas, pisos e acabamentos</span>
             </div>
 
             <div>
@@ -49,12 +50,19 @@ export function HeroSection() {
         </div>
 
         <div className="hero__visual">
-          <div className="hero__image">
+          <div
+            className="hero__image"
+            style={{ '--hero-image': `url(${heroImage})` } as React.CSSProperties}
+          >
             <div className="hero__floating-card">
               <Hammer size={24} />
+
               <div>
-                <strong>Projetos sob medida</strong>
-                <span>Madeira, acabamento e orientação para sua obra.</span>
+                <strong>Soluções para cada etapa da obra</strong>
+                <span>
+                  Madeira, acabamento e orientação para escolher os materiais
+                  certos.
+                </span>
               </div>
             </div>
           </div>

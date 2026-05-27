@@ -22,9 +22,10 @@ export function Navbar() {
           aria-label="Ir para o início"
         >
           <span className="navbar__logo">G</span>
+
           <div>
             <strong>Gibi Carpintaria</strong>
-            <small>Soluções em madeira</small>
+            <small>Madeira, obra e acabamento</small>
           </div>
         </button>
 

@@ -22,7 +22,7 @@ export function ContactSection() {
 
             <div>
               <Phone size={20} />
-              <span>Telefone/WhatsApp a definir</span>
+              <span>(11) 9 7750-0319  </span>
             </div>
 
             <div>
