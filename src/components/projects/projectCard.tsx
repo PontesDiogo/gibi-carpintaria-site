@@ -6,6 +6,15 @@ type ProjectCardProps = {
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const location =
+    project.cidade && project.estado
+      ? `${project.cidade}/${project.estado}`
+      : 'Local não informado'
+
+  const mailSubject = `Orçamento parecido com: ${project.titulo}`
+
+  const mailBody = `Olá, vi no site da Gibi Carpintaria o serviço "${project.titulo}" e gostaria de solicitar um orçamento parecido.`
+
   return (
     <article className="project-card">
       <div className="project-card__image">
@@ -15,9 +24,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <div className="project-card__content">
         <div className="project-card__location">
           <MapPin size={16} />
-          <span>
-            {project.cidade}/{project.estado}
-          </span>
+          <span>{location}</span>
         </div>
 
         <h3>{project.titulo}</h3>
@@ -32,7 +39,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
         <a
           className="project-card__link"
-          href={`mailto:vendas@gibicarpintaria.com?subject=Orçamento parecido com: ${project.titulo}&body=Olá, vi no site o serviço "${project.titulo}" e gostaria de solicitar um orçamento parecido.`}
+          href={`mailto:vendas@gibicarpintaria.com?subject=${encodeURIComponent(
+            mailSubject,
+          )}&body=${encodeURIComponent(mailBody)}`}
         >
           Quero um orçamento parecido
           <ArrowUpRight size={17} />

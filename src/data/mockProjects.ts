@@ -3,15 +3,15 @@ import type { Project } from '../types/project'
 export const mockProjects: Project[] = [
   {
     id: '1',
-    titulo: 'Fornecimento de porta de madeira',
+    titulo: 'Fornecimento de portas para obra residencial',
     descricao:
-      'Fornecimento de porta de madeira para acabamento residencial, com orientação sobre medidas, modelo e aplicação ideal para a obra.',
+      'Fornecimento de portas de madeira, batentes e itens de acabamento para aplicação em obra residencial, com orientação sobre medidas e escolha dos materiais.',
     endereco: 'Endereço não informado',
     cidade: 'Itu',
     estado: 'SP',
-    servicos: ['Portas', 'Madeira', 'Acabamento'],
+    servicos: ['Portas', 'Batentes', 'Acabamento'],
     imagem:
-      'https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=80',
     publicado: true,
     created_at: '2026-05-27',
   },
@@ -19,13 +19,13 @@ export const mockProjects: Project[] = [
     id: '2',
     titulo: 'Solução em forro de madeira',
     descricao:
-      'Atendimento para fornecimento de materiais em madeira voltados para aplicação em forros, trazendo acabamento e conforto visual ao ambiente.',
+      'Fornecimento de materiais em madeira voltados para aplicação em forros, trazendo acabamento, aconchego e valorização visual ao ambiente.',
     endereco: 'Endereço não informado',
     cidade: 'Itu',
     estado: 'SP',
-    servicos: ['Forros', 'Madeira', 'Projeto sob medida'],
+    servicos: ['Forros', 'Madeira', 'Acabamento interno'],
     imagem:
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=80',
     publicado: true,
     created_at: '2026-05-27',
   },
@@ -33,14 +33,15 @@ export const mockProjects: Project[] = [
     id: '3',
     titulo: 'Materiais para acabamento interno',
     descricao:
-      'Fornecimento de itens para acabamento interno, incluindo madeiras, batentes, guarnições e soluções para obras residenciais e comerciais.',
+      'Fornecimento de madeiras, guarnições, rodapés e detalhes para acabamento interno, auxiliando na composição final da obra.',
     endereco: 'Endereço não informado',
     cidade: 'Itu',
     estado: 'SP',
-    servicos: ['Batentes', 'Guarnições', 'Acabamentos'],
+    servicos: ['Guarnições', 'Rodapés', 'Acabamentos'],
     imagem:
-      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80',
     publicado: true,
     created_at: '2026-05-27',
   },
+
 ]

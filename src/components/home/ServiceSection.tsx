@@ -10,52 +10,61 @@ import {
 const services = [
   {
     icon: DoorOpen,
-    title: 'Portas',
+    title: 'Portas e batentes',
     description:
-      'Fornecimento de portas de madeira para diferentes estilos de obras e acabamentos.',
+      'Fornecimento de portas, batentes e componentes para acabamento de obras residenciais, comerciais e reformas.',
+    tag: 'Acabamento',
   },
   {
     icon: Layers,
-    title: 'Forros',
+    title: 'Forros de madeira',
     description:
-      'Soluções em madeira para forros, trazendo acabamento, conforto e beleza ao ambiente.',
+      'Soluções em madeira para forros, trazendo conforto visual, acabamento e valorização para o ambiente.',
+    tag: 'Forros',
   },
   {
     icon: Grid2X2,
-    title: 'Pisos',
+    title: 'Pisos e assoalhos',
     description:
-      'Materiais e soluções para pisos de madeira e acabamentos internos.',
+      'Materiais e soluções para pisos de madeira, acabamento interno e composições que valorizam o espaço.',
+    tag: 'Pisos',
   },
   {
     icon: PackageCheck,
-    title: 'Madeiras',
+    title: 'Madeiras para obra',
     description:
-      'Fornecimento de madeiras e materiais para obras residenciais, comerciais e reformas.',
+      'Fornecimento de madeiras e materiais para diferentes etapas da obra, com atendimento próximo e orientação.',
+    tag: 'Madeiras',
   },
   {
     icon: Ruler,
-    title: 'Batentes e guarnições',
+    title: 'Guarnições e acabamentos',
     description:
-      'Itens essenciais para acabamento de portas e ambientes com melhor padrão visual.',
+      'Itens de acabamento como guarnições, rodapés, vistas e detalhes que completam o padrão visual da obra.',
+    tag: 'Detalhes',
   },
   {
     icon: Hammer,
-    title: 'Projetos sob medida',
+    title: 'Soluções sob medida',
     description:
-      'Apoio na escolha de soluções em madeira conforme a necessidade da sua obra.',
+      'Apoio na escolha de materiais e soluções em madeira conforme a necessidade de cada cliente ou projeto.',
+    tag: 'Sob medida',
   },
 ]
 
-export function ServicesSection() {
+export function ServiceSection() {
   return (
     <section id="servicos" className="section services">
       <div className="container">
         <div className="section-heading">
-          <span className="section-badge">Serviços</span>
-          <h2>O que a Gibi oferece para sua obra</h2>
+          <span className="section-badge">Serviços e produtos</span>
+
+          <h2>Soluções em madeira para diferentes etapas da sua obra</h2>
+
           <p>
-            Produtos e soluções em madeira para quem busca qualidade,
-            acabamento e orientação na escolha dos materiais.
+            A Gibi Carpintaria oferece produtos e soluções para quem busca
+            qualidade, acabamento e praticidade na escolha de materiais para
+            construção, reforma ou projetos sob medida.
           </p>
         </div>
 
@@ -65,11 +74,16 @@ export function ServicesSection() {
 
             return (
               <article className="service-card" key={service.title}>
-                <div className="service-card__icon">
-                  <Icon size={26} />
+                <div className="service-card__top">
+                  <div className="service-card__icon">
+                    <Icon size={26} />
+                  </div>
+
+                  <span className="service-card__tag">{service.tag}</span>
                 </div>
 
                 <h3>{service.title}</h3>
+
                 <p>{service.description}</p>
               </article>
             )

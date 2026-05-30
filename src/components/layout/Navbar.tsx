@@ -27,7 +27,7 @@ export function Navbar() {
           </span>
 
           <div>
-            <strong>Gibi Carpintaria</strong>
+            <strong>Gibi Industria e Comércio de Madeiras</strong>
             <small>Madeira, obra e acabamento</small>
           </div>
         </button>

@@ -4,7 +4,7 @@ import { AboutSection } from '../home/AboutSection'
 import { ContactSection } from '../home/ContactSection'
 import { HeroSection } from '../home/HeroSection'
 import { ProjectsSection } from '../home/ProjectsSection'
-import { ServicesSection } from '../home/ServiceSection'
+import { ServiceSection } from '../home/ServiceSection'
 
 export function HomePage() {
   return (
@@ -13,7 +13,7 @@ export function HomePage() {
 
       <main>
         <HeroSection />
-        <ServicesSection />
+        <ServiceSection />
         <AboutSection />
         <ProjectsSection />
         <ContactSection />
