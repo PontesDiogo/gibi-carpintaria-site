@@ -205,3 +205,28 @@ img {
   letter-spacing: 0.09em;
   text-transform: uppercase;
 }
+
+::selection {
+  background: var(--color-wood-200);
+  color: var(--color-wood-950);
+}
+
+:focus-visible {
+  outline: 3px solid rgba(206, 122, 72, 0.55);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
