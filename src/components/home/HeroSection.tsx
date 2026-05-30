@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react'
 import { ArrowRight, Hammer, Mail } from 'lucide-react'
 import heroImage from '../../assets/images/hero-gibi-carpintaria.png'
+import { createMailToLink } from '../../config/company'
 
 export function HeroSection() {
   return (
@@ -18,10 +19,7 @@ export function HeroSection() {
           </p>
 
           <div className="hero__actions">
-            <a
-              className="btn btn--primary"
-              href="mailto:vendas@gibicarpintaria.com?subject=Solicitação de orçamento pelo site&body=Olá, vim pelo site da Gibi Carpintaria e gostaria de solicitar um orçamento."
-            >
+            <a className="btn btn--primary" href={createMailToLink()}>
               Solicitar orçamento
               <Mail size={18} />
             </a>

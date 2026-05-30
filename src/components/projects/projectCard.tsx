@@ -1,4 +1,5 @@
 import { ArrowUpRight, MapPin } from 'lucide-react'
+import { createMailToLink } from '../../config/company'
 import type { Project } from '../../types/project'
 
 type ProjectCardProps = {
@@ -39,9 +40,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
         <a
           className="project-card__link"
-          href={`mailto:vendas@gibicarpintaria.com?subject=${encodeURIComponent(
-            mailSubject,
-          )}&body=${encodeURIComponent(mailBody)}`}
+          href={createMailToLink({
+            subject: mailSubject,
+            body: mailBody,
+          })}
         >
           Quero um orçamento parecido
           <ArrowUpRight size={17} />

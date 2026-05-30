@@ -1,4 +1,5 @@
 import logoGibiIcon from '../../assets/logos/logo-gibi-icon.png'
+import { company } from '../../config/company'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -8,14 +9,14 @@ export function Footer() {
       <div className="container footer__content">
         <div className="footer__brand">
           <span className="footer__logo">
-            <img src={logoGibiIcon} alt="Logo Gibi Carpintaria" />
+            <img src={logoGibiIcon} alt={`Logo ${company.name}`} />
           </span>
 
           <div>
-            <strong>Gibi Carpintaria</strong>
+            <strong>{company.name}</strong>
             <p>
               Soluções em madeira, portas, pisos, forros, batentes, guarnições
-              e acabamentos para obras em Itu e região.
+              e acabamentos para obras em {company.region}.
             </p>
           </div>
         </div>
@@ -27,15 +28,15 @@ export function Footer() {
         </div>
 
         <div className="footer__contact">
-          <span>vendas@gibicarpintaria.com</span>
-          <span>Itu/SP e região</span>
+          <span>{company.email}</span>
+          <span>{company.region}</span>
           <span>Atendimento para obras, reformas e acabamentos</span>
         </div>
       </div>
 
       <div className="footer__bottom">
         <span>
-          © {currentYear} Gibi Carpintaria. Todos os direitos reservados.
+          © {currentYear} {company.name}. Todos os direitos reservados.
         </span>
       </div>
     </footer>

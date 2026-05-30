@@ -1,6 +1,7 @@
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
 import logoGibiIcon from '../../assets/logos/logo-gibi-icon.png'
+import { company, createMailToLink } from '../../config/company'
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -23,12 +24,12 @@ export function Navbar() {
           aria-label="Ir para o início"
         >
           <span className="navbar__logo">
-            <img src={logoGibiIcon} alt="Logo Gibi Carpintaria" />
+            <img src={logoGibiIcon} alt={`Logo ${company.name}`} />
           </span>
 
           <div>
-            <strong>Gibi Industria e Comércio de Madeiras</strong>
-            <small>Madeira, obra e acabamento</small>
+            <strong>{company.name}</strong>
+            <small>{company.slogan}</small>
           </div>
         </button>
 
@@ -40,10 +41,7 @@ export function Navbar() {
           <button onClick={() => scrollToSection('contato')}>Contato</button>
         </nav>
 
-        <a
-          className="navbar__cta"
-          href="mailto:vendas@gibicarpintaria.com?subject=Solicitação de orçamento pelo site&body=Olá, vim pelo site da Gibi Carpintaria e gostaria de solicitar um orçamento."
-        >
+        <a className="navbar__cta" href={createMailToLink()}>
           Solicitar orçamento
         </a>
 
